@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <meta name="description" content="Get an honest, AI-powered CV review tailored to your dream role." />
+  <title>Roast My CV — Your next role starts here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Roast My CV home"><span class="brand-mark">R<span>!</span></span><span>roast my cv<span class="brand-period">.</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#promise">Our promise</a></nav>
+    <a class="nav-cta" href="#review">Get roasted <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT ROLE STARTS HERE</div>
+        <h1>Your CV called.<br>It needs a <span class="highlight">reality check.</span></h1>
+        <p class="hero-description">Big ambitions. Bullet points from 2019. Let’s fix that. Get the straight-up feedback you need to land the role you actually want.</p>
+        <a class="primary-button" href="#review">Okay, roast my CV <span>↘</span></a>
+        <div class="social-proof"><div class="avatar-stack"><span>J</span><span>M</span><span>A</span><span>T</span></div><span><strong>2,400+</strong> CVs roasted (with love)</span><span class="proof-divider">✳</span><span>Honest, always.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a CV being put through its paces">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✳</div><div class="sparkle sparkle-three">✳</div>
+        <div class="floating-note note-top"><span class="note-icon">↗</span><span><strong>Less fluff.</strong><br>More impact.</span></div>
+        <div class="cv-card"><div class="cv-card-head"><span class="cv-label">CURRICULUM VITAE</span><span class="cv-badge">2025 → 2026</span></div><div class="cv-avatar">A</div><div class="cv-name">Alex Morgan</div><div class="cv-role">YOUR NEXT GREAT HIRE<span class="cursor"></span></div><div class="cv-rule"></div><div class="cv-section-label">EXPERIENCE</div><div class="cv-line cv-line-long"></div><div class="cv-line cv-line-medium"></div><div class="cv-line cv-line-short"></div><div class="cv-section-label cv-section-lower">SELECTED WINS</div><div class="cv-win"><span>↗</span><span class="cv-line cv-line-win"></span></div><div class="cv-win"><span>↗</span><span class="cv-line cv-line-win cv-line-win-short"></span></div><div class="highlight-stroke"></div><div class="red-pen">Show me<br>the numbers!</div><div class="cv-stamp">NEEDS<br>PROOF</div></div>
+        <div class="floating-note note-bottom"><span class="note-icon note-fire">✳</span><span><strong>The honest</strong><br>feedback era.</span></div>
+        <div class="art-caption">GOOD FEEDBACK. NO FLUFF.</div>
+      </div>
+      <div class="hero-footer"><span>THE CAREER CHECKUP YOU DIDN’T KNOW YOU NEEDED</span><span class="footer-doodle">✳</span><span>BUILT FOR YOUR NEXT CHAPTER</span></div>
+    </section>
+
+    <section class="review-section" id="review">
+      <div class="section-heading"><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR TURN</div><h2>Let’s see what we’re<br><span class="highlight">working with.</span></h2><p>Bring the CV. Bring the dream role. We’ll bring the honest feedback.</p></div>
+      <form id="review-form" class="review-card">
+        <div class="upload-zone" id="upload-zone" tabindex="0" role="button" aria-label="Choose a PDF or DOCX CV to upload">
+          <input type="file" id="cv-file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden />
+          <div class="upload-icon">↑</div><div class="upload-copy"><strong>Drop your CV here, or <span>browse files</span></strong><span>PDF or DOCX · Up to 10 MB</span></div><div id="file-chip" class="file-chip" hidden><span>▤</span><span id="file-name"></span><button type="button" id="remove-file" aria-label="Remove file">×</button></div>
+        </div>
+        <label class="field-label" for="dream-role">What role are you going for?</label><div class="role-input-wrap"><span>↗</span><input id="dream-role" name="dream_role" type="text" required placeholder="e.g. Product Designer at a startup" maxlength="120" /><span class="optional-tag">THE DREAM JOB</span></div>
+        <div class="privacy-note"><span>◉</span> Your uploaded file isn’t saved. If AI review is enabled, its extracted text is sent to OpenAI.</div>
+        <button class="submit-button" id="submit-button" type="submit"><span class="submit-label">Give it to me straight</span><span class="submit-arrow">↗</span></button>
+        <div class="form-error" id="form-error" role="alert" hidden></div>
+        <div class="loading-state" id="loading-state" hidden><span class="loader"></span><span>Getting the red pen out<span class="loading-dots">...</span></span></div>
+      </form>
+    </section>
+
+    <section class="how-section" id="how-it-works"><div class="how-intro"><div class="eyebrow"><span class="eyebrow-dot"></span> EASY AS 1, 2, OOF</div><h2>Three steps to<br><span class="highlight">less “we regret”.</span></h2></div><div class="steps"><article class="step"><div class="step-no">01 <span>↗</span></div><h3>Drop the doc.</h3><p>Upload your CV and tell us the job you actually want. No “open to anything” energy.</p></article><article class="step"><div class="step-no">02 <span>✳</span></div><h3>Get the roast.</h3><p>We’ll spot the vague bits, the missing proof, and the skills your dream role needs.</p></article><article class="step"><div class="step-no">03 <span>↗</span></div><h3>Make your move.</h3><p>Get practical fixes, stronger examples, and a clearer path to the next interview.</p></article></div></section>
+
+    <section class="promise-section" id="promise"><div class="promise-mark">“</div><div><div class="eyebrow"><span class="eyebrow-dot"></span> OUR PROMISE TO YOUR INBOX</div><h2>Brutally honest.<br><span class="highlight">Never brutal.</span></h2><p>We roast the résumé, not the person. Expect constructive feedback, specific edits, and zero “just network more” advice.</p></div><a href="#review" class="promise-link">Sounds fair <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">R<span>!</span></span><span>roast my cv<span class="brand-period">.</span></span></a><span>Made for the job you can’t stop thinking about.</span><span>© 2026 ROAST MY CV</span></footer>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
